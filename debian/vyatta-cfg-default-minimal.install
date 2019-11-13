@@ -1,0 +1,2 @@
+config.boot.default opt/vyatta/etc
+yang.conf etc/vyatta

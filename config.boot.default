@@ -1,0 +1,220 @@
+system {
+     acm {
+         enable
+         operational-ruleset {
+             rule 9971 {
+                 action deny
+                 command "/spawn/*"
+                 group vyattaop
+                 group vyattaadm
+             }
+             rule 9972 {
+                 action deny
+                 command "/set/console/*"
+                 group vyattaop
+             }
+             rule 9973 {
+                 action deny
+                 command "/set/date/*"
+                 group vyattaop
+             }
+             rule 9974 {
+                 action deny
+                 command "/set/system/*"
+                 group vyattaop
+             }
+             rule 9975 {
+                 action allow
+                 command "/set/*"
+                 group vyattaop
+             }
+             rule 9976 {
+                 action allow
+                 command "/twping/*"
+                 group vyattaop
+             }
+             rule 9977 {
+                 action allow
+                 command /show/tech-support/save
+                 group vyattaop
+             }
+             rule 9978 {
+                 action deny
+                 command "/show/tech-support/save/*"
+                 group vyattaop
+             }
+             rule 9979 {
+                 action allow
+                 command /show/tech-support/save-uncompressed
+                 group vyattaop
+             }
+             rule 9980 {
+                 action deny
+                 command "/show/tech-support/save-uncompressed/*"
+                 group vyattaop
+             }
+             rule 9981 {
+                 action allow
+                 command /show/tech-support/brief/save
+                 group vyattaop
+             }
+             rule 9982 {
+                 action deny
+                 command "/show/tech-support/brief/save/*"
+                 group vyattaop
+             }
+             rule 9983 {
+                 action allow
+                 command /show/tech-support/brief/save-uncompressed
+                 group vyattaop
+             }
+             rule 9984 {
+                 action deny
+                 command "/show/tech-support/brief/save-uncompressed/*"
+                 group vyattaop
+             }
+             rule 9985 {
+                 action allow
+                 command /show/tech-support/brief/
+                 group vyattaop
+             }
+             rule 9986 {
+                 action deny
+                 command /show/tech-support/brief
+                 group vyattaop
+             }
+             rule 9987 {
+                 action deny
+                 command /show/tech-support
+                 group vyattaop
+             }
+             rule 9988 {
+                 action deny
+                 command /show/configuration
+                 group vyattaop
+             }
+             rule 9989 {
+                 action allow
+                 command "/clear/*"
+                 group vyattaop
+             }
+             rule 9990 {
+                 action allow
+                 command "/show/*"
+                 group vyattaop
+             }
+             rule 9991 {
+                 action allow
+                 command "/monitor/*"
+                 group vyattaop
+             }
+             rule 9992 {
+                 action allow
+                 command "/ping/*"
+                 group vyattaop
+             }
+             rule 9993 {
+                 action allow
+                 command "/reset/*"
+                 group vyattaop
+             }
+             rule 9994 {
+                 action allow
+                 command "/release/*"
+                 group vyattaop
+             }
+             rule 9995 {
+                 action allow
+                 command "/renew/*"
+                 group vyattaop
+             }
+             rule 9996 {
+                 action allow
+                 command "/telnet/*"
+                 group vyattaop
+             }
+             rule 9997 {
+                 action allow
+                 command "/traceroute/*"
+                 group vyattaop
+             }
+             rule 9998 {
+                 action allow
+                 command "/update/*"
+                 group vyattaop
+             }
+             rule 9999 {
+                 action deny
+                 command "*"
+                 group vyattaop
+             }
+        }
+        rpc-ruleset {
+            rule 9993 {
+                    action allow
+                    group vyattaop
+                    rpc-name vyatta-virtualization-v1:list-images
+            }
+            rule 9994 {
+                    action allow
+                    group vyattaop
+                    rpc-name vyatta-system-sensor-v1:system-event-logs
+            }
+            rule 9995 {
+                    action allow
+                    group vyattaop
+                    rpc-name vyatta-service-twamp-v1:twping
+            }
+            rule 9996 {
+                    action allow
+                    group vyattaop
+                    rpc-name vyatta-op-v1:route
+            }
+            rule 9997 {
+                    action allow
+                    group vyattaop
+                    rpc-name vyatta-op-v1:interface
+            }
+            rule 9998 {
+                    action allow
+                    group vyattaop
+                    rpc-name vyatta-op-v1:ping
+            }
+            rule 9999 {
+                    action deny
+                    group vyattaop
+                    module-name "*"
+                    rpc-name "*"
+            }
+        }
+        ruleset {
+             rule 9999 {
+                 action allow
+                 group vyattacfg
+                 operation "*"
+                 path "*"
+            }
+        }
+    }
+    login {
+        user vyatta {
+            authentication {
+                plaintext-password "vyatta"
+            }
+            level admin
+        }
+    }
+    console {
+        device ttyS0 {
+            speed 115200
+        }
+    }
+    config-management {
+        commit-revisions 20
+    }
+}
+
+interfaces {
+    loopback lo {
+    }
+}

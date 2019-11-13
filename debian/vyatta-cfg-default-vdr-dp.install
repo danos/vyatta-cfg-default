@@ -1,0 +1,4 @@
+#!/usr/bin/dh-exec
+config-dp.boot.default => opt/vyatta/etc/config.boot.default
+features opt/vyatta/etc
+yang.conf etc/vyatta

@@ -1,0 +1,4 @@
+config.boot.default opt/vyatta/etc
+features opt/vyatta/etc
+cpp.conf opt/vyatta/etc
+yang.conf etc/vyatta

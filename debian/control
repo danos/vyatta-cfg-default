@@ -1,0 +1,56 @@
+Source: vyatta-cfg-default
+Maintainer: Vyatta Package Maintainers <DL-vyatta-help@att.com>
+Priority: extra
+Section: contrib/net
+Standards-Version: 3.9.6
+Build-Depends: debhelper (>= 9), dh-exec
+
+Package: vyatta-cfg-default-minimal
+Architecture: all
+Description: Minimal Vyatta Network OS configuration
+ Vyatta yang modules for base image. Minimal set of modules used
+ in dataplane image and all other images.
+Conflicts: vyatta-cfg-default-common
+Replaces: vyatta-cfg-default-common
+Depends:
+ ${misc:Depends}
+
+Package: vyatta-cfg-default-vdr-dp
+Architecture: all
+Conflicts: vyatta-cfg-default-common
+Replaces: vyatta-cfg-default-common
+Depends:
+ ${misc:Depends}
+Description: Vyatta default dataplane config
+ Default config file for dataplane ISO
+
+Package: vyatta-cfg-default-vr
+Architecture: all
+Conflicts: vyatta-cfg-default-common
+Replaces: vyatta-cfg-default-common
+Depends:
+ ${misc:Depends}
+Description: Vyatta packages for VR
+ This package contains the CLI modules to control the set of
+ features specific to VR
+
+Package: vyatta-cfg-default-vdr
+Architecture: all
+Conflicts: vyatta-cfg-default-common
+Replaces: vyatta-cfg-default-common
+Depends:
+ ${misc:Depends}
+Description: Vyatta default packages for VDR
+ This package contains the CLI modules to control the features
+ specific to VDR
+
+Package: vyatta-cfg-default-vcpe
+Architecture: all
+Conflicts: vyatta-cfg-default-common
+Replaces: vyatta-cfg-default-common
+Depends:
+ ${misc:Depends}
+Description: Vyatta default packages for vCPE
+ This package contains the CLI modules to control the features
+ specific to vCPE
+

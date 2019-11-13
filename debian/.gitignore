@@ -1,0 +1,4 @@
+*/
+*.substvars
+*.log
+*/*.log

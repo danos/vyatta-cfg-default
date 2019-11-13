@@ -1,0 +1,52 @@
+system {
+    acm {
+        enable
+        operational-ruleset {
+            rule 9988 {
+                action deny
+                command /show/configuration
+                group vyattaop
+            }
+            rule 9989 {
+                action allow
+                command "/clear/*"
+                group vyattaop
+            }
+            rule 9990 {
+                action allow
+                command "/show/*"
+                group vyattaop
+            }
+            rule 9999 {
+                action deny
+                command "*"
+                group vyattaop
+            }
+        }
+        ruleset {
+            rule 9999 {
+                action allow
+                group vyattacfg
+                operation "*"
+                path "*"
+            }
+        }
+    }
+    login {
+        user vyatta {
+            authentication {
+                plaintext-password "vyatta"
+            }
+            level admin
+        }
+    }
+    console {
+        device ttyS0 {
+            speed 9600
+        }
+    }
+    config-management {
+        commit-revisions 20
+    }
+}
+

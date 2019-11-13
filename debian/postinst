@@ -1,0 +1,7 @@
+#!/bin/bash -e
+
+# add config version string to default config file
+/opt/vyatta/sbin/vyatta_current_conf_ver.pl >> \
+/opt/vyatta/etc/config.boot.default
+
+#DEBHELPER#

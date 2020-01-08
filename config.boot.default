@@ -2,6 +2,12 @@ system {
      acm {
          enable
          operational-ruleset {
+             rule 9970 {
+                 action deny
+                 command "/add/system/image/*/packages/*"
+                 group vyattaop
+                 group vyattaadm
+             }
              rule 9971 {
                  action deny
                  command "/spawn/*"

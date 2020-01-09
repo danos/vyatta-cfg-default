@@ -1,3 +1,10 @@
+vyatta-cfg-default (3.18) unstable; urgency=medium
+
+  [ Erik Ziegenbalg ]
+  * Disable HOTFIX for Admin & Oper Group
+
+ -- John Southworth <jx756k@att.com>  Thu, 09 Jan 2020 10:55:31 -0800
+
 vyatta-cfg-default (3.17) unstable; urgency=medium
 
   * DANOS Import master

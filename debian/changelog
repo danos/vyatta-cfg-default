@@ -1,3 +1,10 @@
+vyatta-cfg-default (3.19) unstable; urgency=medium
+
+  [ Mike Manning ]
+  * Modify default username and password to remove vyatta branding
+
+ -- David Stapleton <dstaplet@mail.eng.vyatta.net>  Mon, 04 May 2020 13:44:40 +0100
+
 vyatta-cfg-default (3.18) unstable; urgency=medium
 
   [ Erik Ziegenbalg ]

@@ -1,3 +1,9 @@
+vyatta-cfg-default (3.20) unstable; urgency=medium
+
+  * Restrict 'show log audit' to admin and superuser (Closes: VRVDR-51140)
+
+ -- Nicholas Brown <nick.brown@att.com>  Fri, 15 May 2020 17:09:19 +0100
+
 vyatta-cfg-default (3.19) unstable; urgency=medium
 
   [ Mike Manning ]

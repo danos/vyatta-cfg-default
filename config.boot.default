@@ -2,6 +2,11 @@ system {
      acm {
          enable
          operational-ruleset {
+             rule 9969 {
+                 action deny
+                 command "/show/log/audit"
+                 group vyattaop
+             }
              rule 9970 {
                  action deny
                  command "/add/system/image/*/packages/*"

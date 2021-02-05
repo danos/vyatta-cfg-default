@@ -1,3 +1,10 @@
+vyatta-cfg-default (3.21) unstable; urgency=medium
+
+  [ Daniel Gollub ]
+  * ipsec: enable rpc-list-sas-by-remote feature-toggle
+
+ -- David Stapleton <david.stapleton@intl.att.com>  Fri, 05 Feb 2021 13:31:35 +0000
+
 vyatta-cfg-default (3.20) unstable; urgency=medium
 
   * Restrict 'show log audit' to admin and superuser (Closes: VRVDR-51140)

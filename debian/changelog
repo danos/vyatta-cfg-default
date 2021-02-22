@@ -1,3 +1,10 @@
+vyatta-cfg-default (3.22) unstable; urgency=medium
+
+  [ Gavin Shearer ]
+  * Allow login-type operator to run op-mode commands that use RPCs
+
+ -- David Stapleton <david.stapleton@intl.att.com>  Mon, 22 Feb 2021 11:20:02 +0000
+
 vyatta-cfg-default (3.21) unstable; urgency=medium
 
   [ Daniel Gollub ]

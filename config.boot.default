@@ -259,6 +259,12 @@ system {
             }
         }
         ruleset {
+             rule 9998 {
+                 action allow
+                 group vyattapwdcfg
+                 operation "*"
+                 path "/system/login/user/*/authentication/*"
+             }
              rule 9999 {
                  action allow
                  group vyattacfg

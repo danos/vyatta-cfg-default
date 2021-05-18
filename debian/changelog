@@ -1,3 +1,10 @@
+vyatta-cfg-default (3.23) unstable; urgency=medium
+
+  [ Sharmila Podury ]
+  * Operator level users are not able to renew password
+
+ -- David Stapleton <david.stapleton@intl.att.com>  Tue, 18 May 2021 21:19:40 +0100
+
 vyatta-cfg-default (3.22) unstable; urgency=medium
 
   [ Gavin Shearer ]

@@ -1,3 +1,10 @@
+vyatta-cfg-default (3.24) unstable; urgency=medium
+
+  [ Sharmila Podury ]
+  * Remove ACM rule ruleset added for password renewal
+
+ -- David Stapleton <david.stapleton@intl.att.com>  Mon, 11 Oct 2021 14:45:10 +0100
+
 vyatta-cfg-default (3.23) unstable; urgency=medium
 
   [ Sharmila Podury ]
